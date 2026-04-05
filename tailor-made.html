@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Made Tours | Lankore Travels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+
+    <style>
+        .tailor-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            background-image: url('src/assets/images/hero3.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .tailor-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(11, 43, 71, 0.4) 0%, rgba(7, 25, 42, 0.8) 100%);
+        }
+
+        .tailor-hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tailor-hero h1 {
+            font-size: 5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .tailor-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .tailor-subtitle {
+            display: inline-block;
+            color: var(--color-accent);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 8rem 0;
+            background-color: #fff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .process-step p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Feature Section Upgrade */
+        .tailor-feature-section {
+            padding: 8rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .tailor-split {
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+        }
+
+        .tailor-split-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .tailor-split-image img {
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .tailor-split-content {
+            flex: 1;
+        }
+
+        .tailor-split-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tailor-split-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .tailor-split {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .tailor-hero h1 {
+                font-size: 3rem;
+            }
+            .tailor-split-content h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html"><img src="src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                        style="height: 90px; width: auto;"></a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/tailor-made.html">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/index.html#blog">Blog</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html#home">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/tailor-made.html">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/index.html#blog">Blog</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="tailor-hero reveal">
+        <div class="tailor-hero-content">
+            <span class="tailor-subtitle">Your Journey, Your Way</span>
+            <h1>Tailor Made Tours</h1>
+            <p>Curating personalized experiences that resonate with your travel dreams. Discover Sri Lanka through an itinerary designed exclusively for you.</p>
+        </div>
+    </header>
+
+    <!-- The Process Section -->
+    <section class="process-section">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Our Craft</span>
+                <h2>How We Design Your Dream</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>Tell us your dreams, interests, and travel style. We listen to every detail to understand what makes your perfect journey.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Curating Plan</h3>
+                    <p>Our local experts craft a unique itinerary, hand-picking destinations and experiences that match your profile.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Refine & Perfect</h3>
+                    <p>We work closely with you to adjust every detail until the itinerary is exactly what you envisioned.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Exceptional Trip</h3>
+                    <p>Set off on your custom adventure with 24/7 support and the luxury of private, personalized travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="tailor-feature-section">
+        <div class="container reveal">
+            <div class="tailor-split">
+                <div class="tailor-split-image">
+                    <img src="src/assets/images/tailor-made.png" alt="Custom Sri Lanka Tour">
+                </div>
+                <div class="tailor-split-content">
+                    <span class="subtitle">Bespoke Travel</span>
+                    <h2>Every Detail, Hand-Crafted</h2>
+                    <p>Unlike standard tour packages, our tailor-made journeys are built from the ground up. Whether you want to focus on wildlife safaris, ancient cultural heritage, or relaxing beach retreats, we ensure your time in Sri Lanka is spent exactly how you want.</p>
+                    <ul class="feature-list" style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--color-accent); margin-right: 10px;"></i> <strong>Personalized Pace:</strong> No rushing between sites.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--color-accent); margin-right: 10px;"></i> <strong>Curated Stays:</strong> From boutique villas to luxury hotels.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--color-accent); margin-right: 10px;"></i> <strong>Local Insight:</strong> Experiences that go beyond the guidebooks.</li>
+                    </ul>
+                    <a href="/contact-us.html" class="btn btn-primary">Start Designing Your Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA -->
+    <section class="cta-section" style="background-image: url('src/assets/images/Beach-1.png'); background-attachment: fixed; position: relative; padding: 10rem 0; color: white; text-align: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(11, 43, 71, 0.7);"></div>
+        <div class="container reveal" style="position: relative; z-index: 2;">
+            <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: white;">Ready to Create Your Own Story?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; color: rgba(255,255,255,0.9); max-width: 700px; margin-left: auto; margin-right: auto;">Contact our expert consultants today and let's begin crafting your bespoke Sri Lankan adventure.</p>
+            <a href="/contact-us.html" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.2rem;">Get a Free Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html"><img src="src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                                style="height: 180px; width: auto; margin-bottom: 1rem;"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/tailor-made.html">Tailor Made Tours</a></li>
+                        <li><a href="/transports.html">Transports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
