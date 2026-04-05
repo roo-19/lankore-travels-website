@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Lankore Travels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .about-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            background-image: url('src/assets/images/hero1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(11, 43, 71, 0.4) 0%, rgba(7, 25, 42, 0.8) 100%);
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-hero h1 {
+            font-size: 5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-subtitle {
+            display: inline-block;
+            color: var(--color-accent);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Premium Logo Card Styles */
+        .premium-logo-card-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .premium-logo-card {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 4rem 3rem;
+            box-shadow: 0 30px 60px rgba(11, 43, 71, 0.1),
+                0 0 0 1px rgba(131, 206, 243, 0.1);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition-smooth);
+            z-index: 2;
+        }
+
+        .premium-logo-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(131, 206, 243, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .premium-logo-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(200, 169, 126, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .premium-logo-card img {
+            max-width: 85%;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.05));
+            z-index: 2;
+            transition: var(--transition-smooth);
+        }
+
+        .premium-logo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(11, 43, 71, 0.15);
+        }
+
+        .premium-logo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-glow-bg {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(131, 206, 243, 0.05) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .split-section {
+            padding: 8rem 0;
+        }
+
+        .bg-light-cream {
+            background-color: #faf9f7;
+        }
+
+        .split-row {
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+        }
+
+        .split-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .split-text {
+            flex: 1;
+        }
+
+        .split-text h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .split-text h2.white-text {
+            color: var(--color-bg-white);
+        }
+
+        .split-text p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+        }
+
+        .split-text p.white-text {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .accent-pill {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(200, 169, 126, 0.1);
+            color: var(--color-accent);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stars {
+            color: #FFC107;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .why-card {
+            background: var(--color-bg-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(200, 169, 126, 0.2);
+        }
+
+        .why-icon {
+            font-size: 2rem;
+            color: var(--color-accent);
+            flex-shrink: 0;
+        }
+
+        .why-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .why-content p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+
+            .split-row,
+            .split-row.reverse {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .about-hero h1 {
+                font-size: 3rem;
+            }
+
+            .split-text h2 {
+                font-size: 2.5rem;
+            }
+
+            .why-card {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html"><img src="src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                        style="height: 90px; width: auto;"></a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/index.html#tailor-made">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/index.html#blog">Blog</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html#home">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/index.html#tailor-made">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/index.html#blog">Blog</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Page Header (Image Banner) -->
+    <header class="about-hero reveal">
+        <div class="about-hero-content">
+            <span class="about-subtitle">Experience Lanka</span>
+            <h1>Lankore Travels</h1>
+            <p>Curating exceptional memories and luxury escapes across the teardrop island. Your gateway to the
+                authentic soul of Sri Lanka.</p>
+        </div>
+    </header>
+
+    <!-- Who We Are -->
+    <section class="split-section bg-light-cream">
+        <div class="container reveal">
+            <div class="split-row">
+                <div class="split-text">
+                    <span class="accent-pill">Who We Are</span>
+                    <h2>We Are Your Local Experts</h2>
+                    <p>At Lankore Travels, we are more than just a destination management company. We are a team of
+                        passionate islanders dedicated to revealing the hidden wonders and timeless traditions of Sri
+                        Lanka.</p>
+                    <p>Our journey began with a simple vision: to offer travelers a more intimate, luxurious, and
+                        personalized way to experience our beautiful home. Today, we pride ourselves on being your
+                        trusted local partners, ensuring every mile of your journey is filled with wonder.</p>
+                    <p>From the mist-shrouded highlands to the golden southern shores, we bring you closer to the heart
+                        of Sri Lanka with elegance and expertise.</p>
+                </div>
+                <div class="premium-logo-card-wrapper">
+                    <div class="card-glow-bg"></div>
+                    <div class="premium-logo-card">
+                        <img src="src/assets/images/logo1.png" alt="Lankore Travels Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section bg-white">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Why Us</span>
+                <h2>What Makes Us So Special</h2>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Custom Tours</h3>
+                        <p>Trips made just for you. We shape the journey to match exactly what you love to do.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Trust & Safety</h3>
+                        <p>Your safety is our top priority. We plan every step to keep you secure and comfortable.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Best Prices</h3>
+                        <p>Great value for your money. Clear pricing from the start, with zero hidden costs.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Expert Guides</h3>
+                        <p>Friendly local guides who know the island well and love to share its hidden gems.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>24/7 Support</h3>
+                        <p>We are always here to help you. Reach out to us day or night for quick assistance.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Premium Vehicles</h3>
+                        <p>Travel around the island in comfort and style with our clean, modern vehicles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section"
+        style="background-image: url('src/assets/images/Beach-1.png'); background-attachment: fixed; position: relative; padding: 6rem 0; color: white; text-align: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(11, 43, 71, 0.8);"></div>
+        <div class="container reveal" style="position: relative; z-index: 2;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem; color: white;">Start Your Story With Us</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2.5rem; color: rgba(255,255,255,0.9);">Let our elegant team
+                craft an unforgettable Sri Lankan journey for you.</p>
+            <a href="/contact-us.html" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Plan
+                Your Trip</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html"><img src="src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                                style="height: 180px; width: auto; margin-bottom: 1rem;"></a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful
+                        island of Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/index.html#tours">Our Tours</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Vehicle Fleet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="/index.html#blog">Travel Blog</a></li>
+                        <li><a href="/index.html#tailor-made">Custom Itineraries</a></li>
+                        <li><a href="#">Travel Requirements</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transports | Lankore Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .fleet-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background-image: url('src/assets/images/vehicle/welcometosrilanka.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .fleet-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(11, 43, 71, 0.8) 100%);
+        }
+
+        .fleet-hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .fleet-hero h1 {
+            font-size: 4.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .fleet-subtitle {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .fleet-intro {
+            padding: 6rem 0;
+            background-color: #faf9f6;
+            text-align: center;
+        }
+
+        .fleet-intro h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .fleet-intro p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .fleet-showroom {
+            padding: 5rem 0 8rem;
+            background-color: #fff;
+        }
+
+        .fleet-items {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+        }
+
+        .fleet-item {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .fleet-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .fleet-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .fleet-item-img {
+            flex: 1;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .fleet-item-img img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .fleet-item:hover .fleet-item-img img {
+            transform: scale(1.05);
+        }
+
+        .fleet-item-content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .fleet-item-content h3 {
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .fleet-item-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .fleet-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .fleet-feature-tag {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--color-primary);
+            background: rgba(200, 169, 126, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .fleet-feature-tag i {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 900px) {
+
+            .fleet-item,
+            .fleet-item:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1.5rem;
+            }
+
+            .fleet-features {
+                grid-template-columns: 1fr;
+            }
+
+            .fleet-item-img {
+                padding: 1rem;
+            }
+
+            .fleet-hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                        style="height: 90px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/index.html#tailor-made">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/index.html#blog">Blog</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html#home">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/index.html#tailor-made">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/index.html#blog">Blog</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Page Header (Image Banner) -->
+    <header class="fleet-hero reveal">
+        <div class="fleet-hero-content">
+            <span class="fleet-subtitle">Travel in Comfort</span>
+            <h1>Our Premium Fleet</h1>
+            <p
+                style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                Discover our modern, safe, and luxurious selection of vehicles, tailored for your ultimate Sri Lankan
+                journey.</p>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="fleet-intro reveal">
+        <div class="container">
+            <h2>Experience Luxury on the Road</h2>
+            <p>At Lankore Travels, we believe that the journey is just as important as the destination. Our carefully
+                curated fleet guarantees the highest standards of safety, comfort, and reliability. Whether travelling
+                solo, as a couple, or in a larger group, we have the perfect vehicle to ensure your travels across Sri
+                Lanka are smooth, enjoyable, and distinctly elegant.</p>
+        </div>
+    </section>
+
+    <!-- Fleet Showroom -->
+    <section class="fleet-showroom reveal">
+        <div class="container">
+            <div class="fleet-items">
+
+                <!-- Premium SUV -->
+                <div class="fleet-item">
+                    <div class="fleet-item-img">
+                        <img src="src/assets/images/vehicle/vezelimage.png" alt="Premium SUV">
+                    </div>
+                    <div class="fleet-item-content">
+                        <h3>Premium SUV</h3>
+                        <p>Ideal for small families or couples seeking maximum luxury, elevated views, and ultimate
+                            comfort on any terrain. Experience a flawlessly smooth ride throughout your island
+                            adventure.</p>
+                        <div class="fleet-features">
+                            <span class="fleet-feature-tag"><i class="fas fa-snowflake"></i> Fully
+                                Air-Conditioned</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-user-tie"></i> Professional
+                                Chauffeur</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-suitcase"></i> Ample Luggage Space</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-wifi"></i> Free Onboard Wi-Fi</span>
+                        </div>
+                        <a href="/index.html#contact" class="btn btn-outline" style="margin-top: 1rem;">Reserve This
+                            Vehicle</a>
+                    </div>
+                </div>
+
+                <!-- Luxury Van -->
+                <div class="fleet-item">
+                    <div class="fleet-item-img">
+                        <img src="src/assets/images/vehicle/kdhimage.png" alt="Luxury Van">
+                    </div>
+                    <div class="fleet-item-content">
+                        <h3>Luxury Van</h3>
+                        <p>Spacious seating and ample luggage room perfect for families or small groups wanting to
+                            travel together. With highly adjustable seats and generous legroom, long journeys become
+                            exceptionally relaxing.</p>
+                        <div class="fleet-features">
+                            <span class="fleet-feature-tag"><i class="fas fa-users"></i> Up to 6-8 Passengers</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-snowflake"></i> Fully
+                                Air-Conditioned</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-suitcase"></i> High Luggage Capacity</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-chair"></i> Relaxing Seats</span>
+                        </div>
+                        <a href="/index.html#contact" class="btn btn-outline" style="margin-top: 1rem;">Reserve This
+                            Vehicle</a>
+                    </div>
+                </div>
+
+                <!-- Executive Car -->
+                <div class="fleet-item">
+                    <div class="fleet-item-img">
+                        <img src="src/assets/images/vehicle/premieoimage.png" alt="Executive Car">
+                    </div>
+                    <div class="fleet-item-content">
+                        <h3>Executive Car</h3>
+                        <p>Smooth, quiet, and elegantly refined. The preferred choice for solo travelers and couples
+                            looking for a sophisticated travel experience across Sri Lanka's beautiful roads.</p>
+                        <div class="fleet-features">
+                            <span class="fleet-feature-tag"><i class="fas fa-leaf"></i> Eco-Friendly Engine</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-snowflake"></i> Fully
+                                Air-Conditioned</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-user-tie"></i> Professional
+                                Chauffeur</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-shield-alt"></i> Premium Safety
+                                Features</span>
+                        </div>
+                        <a href="/index.html#contact" class="btn btn-outline" style="margin-top: 1rem;">Reserve This
+                            Vehicle</a>
+                    </div>
+                </div>
+
+                <!-- Comfort Bus/Coach -->
+                <div class="fleet-item">
+                    <div class="fleet-item-img">
+                        <img src="src/assets/images/vehicle/coachimage.png" alt="Comfort Coach">
+                    </div>
+                    <div class="fleet-item-content">
+                        <h3>Comfort Coach</h3>
+                        <p>Designed for larger groups and corporate retreats, featuring climate control, panoramic
+                            windows, and plush seating so everyone can share the incredible Sri Lankan vistas in unified
+                            comfort.</p>
+                        <div class="fleet-features">
+                            <span class="fleet-feature-tag"><i class="fas fa-users"></i> Large Group Capacity</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-camera"></i> Panoramic Windows</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-snowflake"></i> Fully
+                                Air-Conditioned</span>
+                            <span class="fleet-feature-tag"><i class="fas fa-music"></i> Onboard Entertainment</span>
+                        </div>
+                        <a href="/contact-us.html" class="btn btn-outline" style="margin-top: 1rem;">Reserve This
+                            Vehicle</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                                style="height: 180px; width: auto; margin-bottom: 1rem;">
+                        </a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful
+                        island of Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/index.html#tours">Our Tours</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Transports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="/index.html#blog">Travel Blog</a></li>
+                        <li><a href="/index.html#tailor-made">Custom Itineraries</a></li>
+                        <li><a href="#">Travel Requirements</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS (Vite Module) -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

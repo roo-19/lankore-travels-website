@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigiriya | Lankore Travels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Specific page styles for destinations */
+        .dest-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        /* The slider elements */
+        .hero-slider {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+        .slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out, transform 4s ease-in-out;
+            transform: scale(1.05);
+        }
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(11,43,71,0.8) 100%);
+            z-index: 2;
+        }
+
+        .dest-hero-content {
+            position: relative;
+            z-index: 3;
+            padding-top: 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .dest-hero h1 {
+            font-size: 4.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .dest-subtitle {
+            color: var(--accent);
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .dest-info-section {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+        
+        .dest-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        @media (max-width: 900px) {
+            .dest-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .dest-hero h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .places-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent);
+        }
+        
+        .places-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .places-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .places-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .places-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .places-list li i {
+            color: var(--accent);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .dest-action {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 5rem 3rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e0ece4 100%);
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(30, 70, 49, 0.08);
+            border: 1px solid rgba(30, 70, 49, 0.1);
+        }
+        
+        .dest-action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        /* Override btn-outline for light background */
+        .dest-action-buttons .btn-outline {
+            color: var(--color-primary);
+            border-color: rgba(11, 43, 71, 0.3);
+        }
+        
+        .dest-action-buttons .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html#home"><img src="../src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 60px; width: auto;"></a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/index.html#tailor-made">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/index.html#blog">Blog</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html#home">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/index.html#tailor-made">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/index.html#blog">Blog</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Page Header (Image Banner with Slider) -->
+    <header class="dest-hero reveal">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('../src/assets/images/destinations/sigiriya1.png');"></div>
+            <div class="slide" style="background-image: url('../src/assets/images/destinations/sigiriya2.png');"></div>
+            <div class="slide" style="background-image: url('../src/assets/images/destinations/sigiriya3.png');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="dest-hero-content">
+            <span class="dest-subtitle">Sri Lanka Destinations</span>
+            <h1>Sigiriya</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">The ancient rock fortress and palace ruin, a masterpiece of ancient engineering and art.</p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="dest-info-section">
+        <div class="container reveal">
+            <div class="dest-grid">
+                
+                <!-- Left: Full Description -->
+                <div class="about-text">
+                    <h2>About Sigiriya</h2>
+                    <p>Rising dramatically from the central plains, the enigmatic rocky outcrop of Sigiriya is perhaps Sri Lanka's single most dramatic sight. Known as the Lion Rock, it was the short-lived capital of King Kasyapa. Ascend past the fascinating frescoes of "maidens" to the ruined palace at the summit for breathtaking 360-degree views of the surrounding jungle and water gardens below.</p>
+                    <p>Visiting Sigiriya offers a unique blend of heritage, natural beauty, and unforgettable experiences that perfectly embody the spirit of Sri Lanka.</p>
+                </div>
+                
+                <!-- Right: Places to Visit -->
+                <div class="places-card">
+                    <h3>Top Places to Visit</h3>
+                    <ul class="places-list">
+                        <li><i class="fa-solid fa-location-dot"></i> Sigiriya Rock Fortress</li><li><i class="fa-solid fa-location-dot"></i> Pidurangala Rock</li><li><i class="fa-solid fa-location-dot"></i> Sigiriya Museum</li><li><i class="fa-solid fa-location-dot"></i> Water Gardens</li><li><i class="fa-solid fa-location-dot"></i> Mirror Wall</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Bottom CTA -->
+            <div class="dest-action reveal">
+                <h2 style="font-family: 'Playfair Display', serif; color: var(--color-secondary); font-size: 2.5rem; margin-bottom: 1rem;">Ready to experience Sigiriya?</h2>
+                <p style="color: #555; margin-bottom: 2.5rem; font-size: 1.2rem;">Include this marvelous destination in your tailor-made Sri Lankan itinerary today.</p>
+                <div class="dest-action-buttons">
+                    <a href="/index.html#home" class="btn btn-outline" style="padding: 15px 30px; font-size: 1.1rem;"><i class="fas fa-home" style="margin-right: 8px;"></i> Back to Home</a>
+                    <a href="/index.html#destinations" class="btn btn-outline" style="padding: 15px 30px; font-size: 1.1rem;"><i class="fas fa-map-marked-alt" style="margin-right: 8px;"></i> All Destinations</a>
+                    <a href="/contact-us.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem; background-color: var(--color-secondary); border-color: var(--color-secondary);"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Plan Your Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html#home"><img src="../src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 180px; width: auto; margin-bottom: 1rem;"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Transports</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

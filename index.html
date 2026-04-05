@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lankore Travels | Luxury Sri Lanka Tours</title>
+    <meta name="description"
+        content="Discover the beauty of Sri Lanka with Lankore Travels. Premium tailor-made tours, private transport, and luxury experiences.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                        style="height: 90px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#tailor-made">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="#blog">Blog</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#tailor-made">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="#blog">Blog</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-slider">
+            <!-- Using uploaded hero images -->
+            <div class="slide active" style="background-image: url('./src/assets/images/hero1.png');">
+            </div>
+            <div class="slide" style="background-image: url('./src/assets/images/hero2.png');">
+            </div>
+            <div class="slide" style="background-image: url('./src/assets/images/hero3.png');">
+            </div>
+            <div class="slide" style="background-image: url('./src/assets/images/hero4.png');">
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container reveal">
+            <h1 class="hero-title">Explore the Beauty of Sri Lanka with Lankore Travels</h1>
+            <p class="hero-subtitle">Tailor-made journeys, breathtaking landscapes, and unforgettable island
+                experiences.</p>
+            <div class="hero-buttons">
+                <a href="#tours" class="btn btn-primary">Plan Your Tour</a>
+                <a href="#destinations" class="btn btn-outline">Explore Destinations</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <p>Scroll to explore</p>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Travel With Us -->
+    <section id="about" class="section why-us">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">The Lankore Experience</span>
+                <h2>Why Travel With Us</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3>Tailor Made Travel</h3>
+                    <p>Personalized itineraries crafted by experts to match your specific interests and travel style.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3>Expert Local Guides</h3>
+                    <p>Discover hidden gems and rich history with our passionate, knowledgeable local guides.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>24/7 Assistance</h3>
+                    <p>Enjoy peace of mind with round-the-clock support throughout your entire Sri Lankan journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Trusted Partner</h3>
+                    <p>A certified and highly recommended travel operator committed to luxury and safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="section destinations bg-light">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Iconic Locations</span>
+                <h2>Sri Lanka Destinations</h2>
+            </div>
+
+            <div class="destination-grid">
+                <!-- Sigiriya -->
+                <div class="dest-card" onclick="window.location.href='/destinations/sigiriya.html'">
+                    <img src="src/assets/images/cards/sigiriyacard.JPG" alt="Sigiriya" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Sigiriya</h3>
+                        <p>The ancient rock fortress and palace ruin, a masterpiece of ancient engineering and art.</p>
+                        <a href="/destinations/sigiriya.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Kandy -->
+                <div class="dest-card" onclick="window.location.href='/destinations/kandy.html'">
+                    <img src="src/assets/images/cards/kandycard.JPG" alt="Kandy" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Kandy</h3>
+                        <p>The cultural capital hidden amidst rolling hills, home to the sacred Temple of the Tooth.</p>
+                        <a href="/destinations/kandy.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Ella -->
+                <div class="dest-card" onclick="window.location.href='/destinations/ella.html'">
+                    <img src="src/assets/images/cards/ellacard.JPG" alt="Ella" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Ella</h3>
+                        <p>A charming mountain village famous for its dramatic scenic views and lush tea plantations.
+                        </p>
+                        <a href="/destinations/ella.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Yala -->
+                <div class="dest-card" onclick="window.location.href='/destinations/yala.html'">
+                    <img src="src/assets/images/cards/yalacard.JPG" alt="Yala" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Yala</h3>
+                        <p>Experience thrilling safaris with high chances of spotting majestic leopards and elephants.
+                        </p>
+                        <a href="/destinations/yala.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Colombo -->
+                <div class="dest-card" onclick="window.location.href='/destinations/colombo.html'">
+                    <img src="src/assets/images/cards/cmbcard.JPG" alt="Colombo" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Colombo</h3>
+                        <p>The bustling commercial capital blending colonial architecture with modern skyscrapers.</p>
+                        <a href="/destinations/colombo.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Galle -->
+                <div class="dest-card" onclick="window.location.href='/destinations/galle.html'">
+                    <img src="src/assets/images/cards/gallecard.JPG" alt="Galle" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Galle</h3>
+                        <p>A historic coastal city known for its beautiful Dutch Fort and timeless colonial
+                            architecture.</p>
+                        <a href="/destinations/galle.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Nuwara Eliya -->
+                <div class="dest-card" onclick="window.location.href='/destinations/nuwara-eliya.html'">
+                    <img src="src/assets/images/cards/nuwaraeliyacard.JPG" alt="Nuwara Eliya" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Nuwara Eliya</h3>
+                        <p>Often called "Little England", featuring cool climates, waterfalls, and vast tea estates.</p>
+                        <a href="/destinations/nuwara-eliya.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Anuradhapura -->
+                <div class="dest-card" onclick="window.location.href='/destinations/anuradhapura.html'">
+                    <img src="src/assets/images/cards/anuradhapuracard.JPG" alt="Anuradhapura" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Anuradhapura</h3>
+                        <p>The first ancient capital, filled with monumental dagobas and sacred bodhi trees.</p>
+                        <a href="/destinations/anuradhapura.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Knuckles -->
+                <div class="dest-card" onclick="window.location.href='/destinations/knuckles.html'">
+                    <img src="src/assets/images/cards/knucklescard.JPG" alt="Knuckles Range" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Knuckles</h3>
+                        <p>A rugged mountain range perfect for hiking, boasting unique biodiversity and misty peaks.</p>
+                        <a href="/destinations/knuckles.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Polonnaruwa -->
+                <div class="dest-card" onclick="window.location.href='/destinations/polonnaruwa.html'">
+                    <img src="src/assets/images/cards/polonnaruwacard.JPG" alt="Polonnaruwa" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Polonnaruwa</h3>
+                        <p>The medieval capital showcasing well-preserved ruins, ancient statues, and vast reservoirs.
+                        </p>
+                        <a href="/destinations/polonnaruwa.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Dambulla -->
+                <div class="dest-card" onclick="window.location.href='/destinations/dambulla.html'">
+                    <img src="src/assets/images/cards/dambullacard.JPG" alt="Dambulla" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Dambulla</h3>
+                        <p>Famous for its magnificent cave temple complex filled with stunning ancient Buddhist statues.
+                        </p>
+                        <a href="/destinations/dambulla.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Jaffna -->
+                <div class="dest-card" onclick="window.location.href='/destinations/jaffna.html'">
+                    <img src="src/assets/images/cards/jaffnacard.JPG" alt="Jaffna" class="dest-img">
+                    <div class="dest-content">
+                        <h3>Jaffna</h3>
+                        <p>The northern cultural hub featuring distinct cuisine, colorful Hindu temples, and colonial
+                            forts.</p>
+                        <a href="/destinations/jaffna.html" class="btn-text">Explore <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tours -->
+    <section id="tours" class="section tours">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Curated Experiences</span>
+                <h2>Popular Tour Packages</h2>
+            </div>
+
+            <div class="tour-grid">
+                <!-- Tour 1 -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80&w=600"
+                            alt="5 Day Highlights">
+                        <div class="tour-duration">5 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(48 Reviews)</span>
+                        </div>
+                        <h3>5 Day Sri Lanka Highlights</h3>
+                        <p>A quick immersive escape covering culture, nature, and the stunning southern coast.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="from">From</span>
+                                <span class="price">$550</span>
+                            </div>
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 2 -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1546708973-14dd8ed6dc28?auto=format&fit=crop&q=80&w=600"
+                            alt="7 Day Cultural">
+                        <div class="tour-duration">7 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(62 Reviews)</span>
+                        </div>
+                        <h3>7 Day Cultural Journey</h3>
+                        <p>Delve deep into the heritage of the Cultural Triangle and ancient majestic cities.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="from">From</span>
+                                <span class="price">$890</span>
+                            </div>
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 3 -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620023023075-8ecad2e91da5?auto=format&fit=crop&q=80&w=600"
+                            alt="10 Day Wildlife">
+                        <div class="tour-duration">10 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(35 Reviews)</span>
+                        </div>
+                        <h3>10 Day Nature & Wildlife Adventure</h3>
+                        <p>Experience the ultimate safari trails and dense tropical jungles teeming with life.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="from">From</span>
+                                <span class="price">$1,350</span>
+                            </div>
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 4 -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=600"
+                            alt="12 Day Ultimate">
+                        <div class="tour-duration">12 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(89 Reviews)</span>
+                        </div>
+                        <h3>12 Day Ultimate Sri Lanka</h3>
+                        <p>The complete island experience blending beaches, mountains, wildlife, and history.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="from">From</span>
+                                <span class="price">$1,800</span>
+                            </div>
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tailor Made Tours -->
+    <section id="tailor-made" class="section tailor-made bg-dark">
+        <div class="container reveal">
+            <div class="split-layout">
+                <div class="split-image">
+                    <img src="./src/assets/images/tailor-made.png" alt="Tailor Made Travel">
+                    <div class="decor-circle"></div>
+                </div>
+                <div class="split-content">
+                    <span class="subtitle gold">Your Journey, Your Way</span>
+                    <h2>Tailor Made Tours</h2>
+                    <p>Every traveler is unique, and so should be their journey. With our tailor-made service, visitors
+                        can create their own personalized Sri Lanka itinerary based on interests, travel duration, and
+                        desired experiences.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Handpicked luxury accommodations</li>
+                        <li><i class="fas fa-check-circle"></i> Private chauffeur-driven vehicles</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive access to hidden locations</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible pacing suitable to your style</li>
+                    </ul>
+                    <a href="/contact-us.html" class="btn btn-primary mt-4">Create My Custom Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Fleet -->
+    <section id="fleet" class="section fleet">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Travel in Comfort</span>
+                <h2>Our Premium Vehicle Fleet</h2>
+            </div>
+
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <img src="src/assets/images/vehicle/vezelimage.png" alt="Luxury SUV">
+                    </div>
+                    <div class="fleet-info">
+                        <h3>Premium SUV</h3>
+                        <p>Ideal for small families or couples seeking maximum luxury, elevated views, and ultimate
+                            comfort on any terrain.</p>
+                    </div>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <img src="src/assets/images/vehicle/kdhimage.png" alt="Luxury Van">
+                    </div>
+                    <div class="fleet-info">
+                        <h3>Luxury Van</h3>
+                        <p>Spacious seating and ample luggage room perfect for families or small groups wanting to
+                            travel together.</p>
+                    </div>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <img src="src/assets/images/vehicle/premieoimage.png" alt="Executive Car">
+                    </div>
+                    <div class="fleet-info">
+                        <h3>Executive Car</h3>
+                        <p>Smooth, quiet, and elegant. The preferred choice for solo travelers and couples looking for a
+                            refined experience.</p>
+                    </div>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <img src="src/assets/images/vehicle/coachimage.png" alt="Comfort Bus">
+                    </div>
+                    <div class="fleet-info">
+                        <h3>Comfort Coach</h3>
+                        <p>Designed for larger groups and corporate retreats, featuring climate control, panoramic
+                            windows, and plush seating.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By / Reviews -->
+    <section class="section reviews bg-light overflow-hidden">
+        <div class="container reveal">
+            <div class="trust-container">
+                <div class="trust-badges">
+                    <h3>Trusted By Travelers</h3>
+                    <p class="trust-text">"Lankore Travels is proudly listed on TripAdvisor and trusted by travelers
+                        from around the world."</p>
+                    <div class="badges-flex">
+                        <div class="badge ta-badge">
+                            <i class="fab fa-tripadvisor"></i>
+                            <div class="ta-rating">
+                                <div class="circles">
+                                    <span class="circle full"></span><span class="circle full"></span><span
+                                        class="circle full"></span><span class="circle full"></span><span
+                                        class="circle full"></span>
+                                </div>
+                                <span>5.0 Excellence</span>
+                            </div>
+                        </div>
+                        <div class="badge cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>SL Tourism Certified</span>
+                        </div>
+                        <div class="badge cert-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe Travel Approved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slider-container">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">An absolutely unforgettable trip! The attention to detail, the luxury
+                            vehicle, and our guide made our 10-day honeymoon in Sri Lanka perfect. Highly recommended!
+                        </p>
+                        <div class="reviewer">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma" class="reviewer-img">
+                            <div class="reviewer-info">
+                                <h4>Emma & James</h4>
+                                <span class="country">🇬🇧 United Kingdom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Travel Stories & Tips</span>
+                <h2>Latest from Our Blog</h2>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1546708973-14dd8ed6dc28?auto=format&fit=crop&q=80&w=600"
+                            alt="Blog 1">
+                    </div>
+                    <div class="blog-content">
+                        <span class="date">Oct 12, 2026</span>
+                        <h3>Best Places to Visit in Sri Lanka</h3>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1620023023075-8ecad2e91da5?auto=format&fit=crop&q=80&w=600"
+                            alt="Blog 2">
+                    </div>
+                    <div class="blog-content">
+                        <span class="date">Oct 05, 2026</span>
+                        <h3>Top Wildlife Experiences in Sri Lanka</h3>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=600"
+                            alt="Blog 3">
+                    </div>
+                    <div class="blog-content">
+                        <span class="date">Sep 28, 2026</span>
+                        <h3>Hidden Beaches of Sri Lanka</h3>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Post 4 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1588614603991-628f24458cd0?auto=format&fit=crop&q=80&w=600"
+                            alt="Blog 4">
+                    </div>
+                    <div class="blog-content">
+                        <span class="date">Sep 15, 2026</span>
+                        <h3>Travel Tips for First Time Visitors</h3>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA Section -->
+    <section class="cta-section" style="background-image: url('src/assets/images/Beach-1.png');">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content reveal">
+            <h2>Start Your Sri Lanka Adventure Today</h2>
+            <p>Let us craft the perfect itinerary for your luxury island getaway.</p>
+            <div class="cta-buttons">
+                <a href="#tours" class="btn btn-primary">Plan Your Tour</a>
+                <a href="/contact-us.html" class="btn btn-outline">Contact Us</a>
+            </div>
+
+            <div class="stats-container mt-5">
+                <div class="stat-item">
+                    <span class="counter" data-target="1000">0</span><span>+</span>
+                    <p>Happy Travelers</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="200">0</span><span>+</span>
+                    <p>Tours Completed</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="100">0</span>
+                    <p>Destinations Covered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">Get In Touch</span>
+                <h2>Plan Your Dream Tour</h2>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p>Reach out to our travel experts to start planning your bespoke Sri Lankan adventure.</p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Colombo, Sri Lanka</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+94 77 123 4567</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>booking@lankoretravels.com</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/94711444631" class="btn btn-whatsapp w-100">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Travel Duration (Days)</label>
+                                <input type="number" id="duration" placeholder="e.g. 7">
+                            </div>
+                            <div class="form-group">
+                                <label for="pax">Number of Travelers</label>
+                                <input type="number" id="pax" placeholder="e.g. 2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message / Requirements</label>
+                            <textarea id="message" rows="5"
+                                placeholder="Tell us about your interests, preferred destinations, etc."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                                style="height: 180px; width: auto; margin-bottom: 1rem;">
+                        </a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful
+                        island of Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="#tours">Our Tours</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Vehicle Fleet</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="#blog">Travel Blog</a></li>
+                        <li><a href="#tailor-made">Custom Itineraries</a></li>
+                        <li><a href="#">Travel Requirements</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS (Vite Module) -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
