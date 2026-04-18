@@ -238,46 +238,144 @@
         /* Sidebar */
         .sidebar {
             position: sticky;
-            top: 120px;
+            top: 90px;
             background: var(--color-bg-white);
-            padding: 2.5rem;
+            padding: 1.25rem;
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-md);
             border: 1px solid rgba(0,0,0,0.03);
         }
 
         .sidebar-title {
-            font-size: 1.5rem;
+            font-size: 1.15rem;
             color: var(--color-primary);
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
             border-bottom: 1px solid rgba(0,0,0,0.05);
             font-weight: 600;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             color: var(--color-text-main);
         }
 
-        .form-group input, .form-group select {
+        .form-group input, .form-group select, .custom-select-trigger {
             width: 100%;
-            padding: 0.8rem 1rem;
+            padding: 0.6rem 0.8rem;
             border: 1px solid rgba(0,0,0,0.1);
             border-radius: var(--radius-sm);
             font-family: var(--font-body);
             background: var(--color-bg-light);
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem;
             transition: var(--transition-fast);
+            font-size: 0.9rem;
         }
 
-        .form-group input:focus, .form-group select:focus {
+        .form-group input:focus, .form-group select:focus, .custom-select-trigger:focus {
             outline: none;
             border-color: var(--color-accent);
             background: var(--color-bg-white);
+        }
+
+        /* Custom Country Select */
+        .custom-select-wrapper {
+            position: relative;
+            user-select: none;
+        }
+
+        .custom-select-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background: var(--color-bg-light);
+            padding: 0.7rem 0.9rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            color: var(--color-text-main);
+        }
+
+        .custom-select-trigger:after {
+            content: '\f0d7';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-left: 10px;
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .custom-select-wrapper.open .custom-select-trigger:after {
+            transform: rotate(180deg);
+        }
+
+        .custom-select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            margin-top: -5px; /* compact */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: none;
+            max-height: 250px;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .custom-select-wrapper.open .custom-select-options {
+            display: flex;
+        }
+
+        .search-box {
+            padding: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .options-list {
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .option {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .option:hover {
+            background: rgba(200, 169, 126, 0.1);
+        }
+
+        .option .press-hint {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .option:hover .press-hint {
+            opacity: 1;
         }
 
         .btn-submit {
@@ -285,6 +383,7 @@
             display: flex;
             justify-content: center;
             font-size: 1.1rem;
+            margin-top: 0.5rem;
         }
 
         /* Similar Tours Slider */
@@ -843,19 +942,22 @@
                 </div>
                 <div class="form-group">
                     <label>Mobile number *</label>
-                    <input type="text" placeholder="e.g. +94 123456789 (WhatsApp / WeChat)" required>
+                    <input type="text" placeholder="e.g. +94 123456789" required>
                 </div>
                 <div class="form-group">
                     <label>Your Country</label>
-                    <select>
-                        <option value="">Select Country</option>
-                        <option value="UK">United Kingdom</option>
-                        <option value="US">United States</option>
-                        <option value="AU">Australia</option>
-                        <option value="CA">Canada</option>
-                        <option value="EU">Europe</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <div class="custom-select-wrapper" id="countrySelect">
+                        <div class="custom-select-trigger">Select Country</div>
+                        <div class="custom-select-options">
+                            <div class="search-box">
+                                <input type="text" placeholder="Search country...">
+                            </div>
+                            <div class="options-list" id="countryOptions">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                        <input type="hidden" name="country" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Estimated arrival date *</label>
@@ -1080,6 +1182,82 @@
                     });
                 });
             }
+
+            // Custom Country Select Logic
+            const countries = [
+                "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
+                "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+                "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic",
+                "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+                "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
+                "Fiji", "Finland", "France",
+                "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana",
+                "Haiti", "Honduras", "Hungary",
+                "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+                "Jamaica", "Japan", "Jordan",
+                "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan",
+                "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
+                "Madagascar", "Malawi", "Malaysia", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
+                "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway",
+                "Oman",
+                "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+                "Qatar",
+                "Romania", "Russia", "Rwanda",
+                "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+                "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
+                "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan",
+                "Vanuatu", "Vatican City", "Venezuela", "Vietnam",
+                "Yemen",
+                "Zambia", "Zimbabwe"
+            ];
+
+            const wrapper = document.getElementById('countrySelect');
+            const trigger = wrapper.querySelector('.custom-select-trigger');
+            const optionsContainer = wrapper.querySelector('.options-list');
+            const searchInput = wrapper.querySelector('.search-box input');
+            const hiddenInput = wrapper.querySelector('input[type="hidden"]');
+
+            function populateOptions(filter = '') {
+                optionsContainer.innerHTML = '';
+                const filtered = countries.filter(c => c.toLowerCase().includes(filter.toLowerCase()));
+                
+                filtered.forEach(country => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.innerHTML = `${country} <span class="press-hint">Press to select</span>`;
+                    div.addEventListener('click', () => {
+                        trigger.textContent = country;
+                        hiddenInput.value = country;
+                        wrapper.classList.remove('open');
+                        
+                        // Reset search and scroll for next opening
+                        searchInput.value = '';
+                        populateOptions();
+                        optionsContainer.scrollTop = 0;
+                    });
+                    optionsContainer.appendChild(div);
+                });
+            }
+
+            trigger.addEventListener('click', () => {
+                wrapper.classList.toggle('open');
+                if (wrapper.classList.contains('open')) {
+                    searchInput.focus();
+                }
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                populateOptions(e.target.value);
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!wrapper.contains(e.target)) {
+                    wrapper.classList.remove('open');
+                }
+            });
+
+            populateOptions();
         });
     </script>
 </body>
