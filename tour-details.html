@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic & Cultural Tour 14 Days | Lankore Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+
+    <style>
+        /* Tour Specific Styles */
+        .tour-header {
+            padding: 180px 0 60px;
+            background-color: var(--color-primary);
+            color: var(--color-bg-white);
+            text-align: left;
+        }
+
+        .tour-header h1 {
+            font-size: 3.5rem;
+            color: var(--color-bg-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .tour-header .location {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tour-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .meta-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(200, 169, 126, 0.2);
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .meta-text span {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-text strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .meta-rating {
+            color: var(--color-accent);
+            font-size: 1.1rem;
+        }
+
+        /* Layout */
+        .tour-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 6rem 0;
+            align-items: start;
+        }
+
+        /* Main Content */
+        .tour-section {
+            margin-bottom: 4rem;
+        }
+
+        .tour-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 1rem;
+        }
+
+        .tour-section h3 {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: var(--font-body);
+        }
+
+        /* Accordion */
+        .accordion-item {
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+            border-radius: var(--radius-sm);
+            background: var(--color-bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            overflow: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .accordion-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-bg-light);
+            transition: var(--transition-fast);
+        }
+
+        .accordion-header:hover {
+            background: rgba(200, 169, 126, 0.05);
+        }
+
+        .accordion-header i {
+            color: var(--color-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-item.active .accordion-header {
+            background: rgba(200, 169, 126, 0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: var(--color-bg-white);
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+        }
+
+        .day-overview {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        .day-overview span {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Inclusions */
+        .inclusion-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .inclusion-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .inclusion-list-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .inclusion-list-items li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .inclusion-list-items li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 1.1rem;
+        }
+
+        .inclusion-list-items li i.fa-check {
+            color: #2ECC71;
+        }
+
+        .inclusion-list-items li i.fa-times {
+            color: #E74C3C;
+        }
+
+        /* Info Lists */
+        .info-list {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .info-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            background: var(--color-bg-white);
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-weight: 600;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+            color: var(--color-text-main);
+        }
+
+        .form-group input, .form-group select, .custom-select-trigger {
+            width: 100%;
+            padding: 0.5rem 0.7rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            background: var(--color-bg-light);
+            margin-bottom: 0.6rem;
+            transition: var(--transition-fast);
+            font-size: 0.85rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .custom-select-trigger:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: var(--color-bg-white);
+        }
+
+        /* Custom Country Select */
+        .custom-select-wrapper {
+            position: relative;
+            user-select: none;
+        }
+
+        .custom-select-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background: var(--color-bg-light);
+            padding: 0.7rem 0.9rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            color: var(--color-text-main);
+        }
+
+        .custom-select-trigger:after {
+            content: '\f0d7';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-left: 10px;
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .custom-select-wrapper.open .custom-select-trigger:after {
+            transform: rotate(180deg);
+        }
+
+        .custom-select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            margin-top: -5px; /* compact */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: none;
+            max-height: 250px;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .custom-select-wrapper.open .custom-select-options {
+            display: flex;
+        }
+
+        .search-box {
+            padding: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .options-list {
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .option {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .option:hover {
+            background: rgba(200, 169, 126, 0.1);
+        }
+
+        .option .press-hint {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .option:hover .press-hint {
+            opacity: 1;
+        }
+
+        .btn-submit {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Similar Tours Slider */
+        .similar-tours {
+            padding: 6rem 0;
+            background: var(--color-bg-white);
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .similar-tours h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .similar-tours h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-primary);
+        }
+
+        .slider-wrapper {
+            position: relative;
+            padding: 10px;
+        }
+
+        .tour-slider {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding-bottom: 2rem;
+        }
+
+        .tour-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tour-slider .tour-card {
+            flex: 0 0 calc(33.333% - 1.35rem);
+            scroll-snap-align: start;
+            min-width: 320px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .dot.active {
+            background: var(--color-primary);
+            width: 25px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1100px) {
+            .tour-slider .tour-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tour-slider {
+                gap: 1.5rem;
+            }
+            .tour-slider .tour-card {
+                flex: 0 0 calc(100% - 0rem);
+            }
+            .similar-tours h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 90px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/tours.html" class="active">Tours</a>
+                <a href="/tailor-made.html">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/tailor-made.html">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Tour Text Header (No Image) -->
+    <section class="tour-header">
+        <div class="container">
+            <h1 id="tour-page-title">Loading Tour...</h1>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> <span id="tour-location-meta">Sri Lanka</span></div>
+
+            <div class="tour-meta-grid">
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="far fa-clock"></i></div>
+                    <div class="meta-text">
+                        <span>Duration</span>
+                        <strong id="tour-duration-meta">Loading...</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fas fa-hiking"></i></div>
+                    <div class="meta-text">
+                        <span>Tour Type</span>
+                        <strong id="tour-type-meta">Loading...</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="far fa-star"></i></div>
+                    <div class="meta-text">
+                        <span>Rating</span>
+                        <div class="meta-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container tour-layout">
+        <!-- Main Content (Left) -->
+        <main class="tour-main">
+            <!-- Overview Section -->
+            <section class="tour-section">
+                <h2>Overview</h2>
+                <h3 id="tour-overview-title"></h3>
+                <div id="tour-overview-content">
+                    <p>Loading overview information...</p>
+                </div>
+            </section>
+
+            <!-- Itinerary Section -->
+            <section class="tour-section">
+                <h2>Itinerary</h2>
+                <p>We have carefully planned out each day to give you the best possible experience. From exploring historic landmarks to tasting delicious local cuisine, each day is packed with adventure and excitement. Join us as we take you on a journey through some of the most fascinating destinations in the world.</p>
+
+                <div class="accordion" id="tour-itinerary">
+                    <!-- Iterinerary entries will be loaded dynamically here -->
+                </div>
+            </section>
+
+            <!-- Included / Excluded Section -->
+            <section class="tour-section">
+                <h2>Included / Excluded</h2>
+                <div class="inclusion-list">
+                    <div class="inclusion-column">
+                        <h4>Included</h4>
+                        <ul class="inclusion-list-items" id="tour-inclusions">
+                            <!-- Inclusions loaded via JS -->
+                        </ul>
+                    </div>
+                    <div class="inclusion-column">
+                        <h4>Excluded</h4>
+                        <ul class="inclusion-list-items" id="tour-exclusions">
+                            <!-- Exclusions loaded via JS -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Useful Information Section -->
+            <section class="tour-section">
+                <h2>Useful Information</h2>
+                
+                <h3>Key Notes</h3>
+                <ul class="info-list">
+                    <li><strong>Guide:</strong> A Friendly and professional tour leader tasked with ensuring the smooth operations of the tour, as well as providing practical support to passengers throughout the entire trip.</li>
+                    <li><strong>Transport:</strong> Private transportation in an fully air-conditioned modern vehicle.</li>
+                    <li><strong>Flight:</strong> International flights are excluded. You can organize your flights separately. We’ll arrange free airport pick-up and drop-off.</li>
+                </ul>
+
+                <h3>Important Notes</h3>
+                <ul class="info-list">
+                    <li>Most entrance and activity fees are paid in local currency. We suggest you keep some Sri Lankan rupees.</li>
+                    <li>Religious places have a strict protocol when it comes to clothes and people should cover themselves up.</li>
+                    <li>Sun protection, mosquito repellent, sunglasses and a hat can be very useful during your tour.</li>
+                    <li>The official check-in time at all hotels will be at 02:00 pm. The official check-out time is at 11:00 am.</li>
+                </ul>
+
+                <h3>Climate And Average Temperatures</h3>
+                <p>Sri Lanka is a year-around holiday destination with two monsoon seasons. The temperature is constantly around 27°C on the coast, while on the hill side it always stays below 20°C.</p>
+
+                <h3>Terms And Conditions</h3>
+                <ul class="info-list">
+                    <li>Local conditions prevalent at the time of travel may result in modifications to tour contents without prior notice.</li>
+                    <li>Children must be accompanied by a responsible adult 18 years old or over to travel. No unaccompanied minors allowed.</li>
+                    <li>No refund for unused services.</li>
+                </ul>
+                
+                <h3>Optional Extras</h3>
+                <ul class="info-list">
+                    <li>The tour can be customized (Itinerary/Days/Meals)</li>
+                    <li>Ayurvedic Treatments</li>
+                    <li>B’Day/Anniversary-celebrations arrangements</li>
+                    <li>Shopping Tours</li>
+                </ul>
+            </section>
+        </main>
+        
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Inquire About This Tour</h3>
+
+            <form action="#">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile number *</label>
+                    <input type="text" placeholder="e.g. +94 123456789" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Country</label>
+                    <div class="custom-select-wrapper" id="countrySelect">
+                        <div class="custom-select-trigger">Select Country</div>
+                        <div class="custom-select-options">
+                            <div class="search-box">
+                                <input type="text" placeholder="Search country...">
+                            </div>
+                            <div class="options-list" id="countryOptions">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                        <input type="hidden" name="country" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Estimated arrival date *</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Number of travellers *</label>
+                    <input type="number" placeholder="Eg: 2" required min="1">
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
+            </form>
+        </aside>
+    </div>
+
+    <!-- View Other Tours Slider -->
+    <section class="similar-tours">
+        <div class="container">
+            <h2>View Other</h2>
+            <h3>Tours</h3>
+            
+            <div class="slider-wrapper">
+                <div class="tour-slider" id="tourSlider">
+                    <!-- Tour 1 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/3days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 3 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 03 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Kandy, Bentota, Colombo.</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 2 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/6days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 6 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 06 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negambo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Mirissa</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/13days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 13 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 13 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negambo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 4 (NEW) -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/8days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 8 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 08 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negombo, Dambulla, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 5 (NEW) -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/10days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 10 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 10 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negombo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Bentota, Colombo</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 6 (NEW) -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/14days_package.png" alt="Leisure & Family Holiday">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Leisure & Family Holiday | 14 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Bentota, Kandy, Dambulla, Pasikudha, Colombo.</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 180px; width: auto; margin-bottom: 1rem;">
+                        </a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful island of Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/tours.html">Our Tours</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Transports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="/index.html#blog">Travel Blog</a></li>
+                        <li><a href="/tailor-made.html">Custom Itineraries</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/tour-loader.js"></script>
+    <script>
+        // Accordion functionality for itinerary
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                
+                header.addEventListener('click', () => {
+                    // Close other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    const content = item.querySelector('.accordion-content');
+                    
+                    if (item.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+
+            // Open first day by default
+            if(accordionItems.length > 0) {
+                accordionItems[0].classList.add('active');
+                const firstContent = accordionItems[0].querySelector('.accordion-content');
+                firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+            }
+
+            // Slider Logic
+            const slider = document.getElementById('tourSlider');
+            const dots = document.querySelectorAll('.dot');
+            
+            if(slider && dots.length > 0) {
+                slider.addEventListener('scroll', () => {
+                    const scrollPercent = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
+                    const activeIndex = Math.round(scrollPercent * (dots.length - 1));
+                    
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === activeIndex);
+                    });
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        const scrollTo = (slider.scrollWidth - slider.clientWidth) * (index / (dots.length - 1));
+                        slider.scrollTo({
+                            left: scrollTo,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            }
+
+            // Custom Country Select Logic
+            const countries = [
+                "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
+                "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+                "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic",
+                "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+                "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
+                "Fiji", "Finland", "France",
+                "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana",
+                "Haiti", "Honduras", "Hungary",
+                "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+                "Jamaica", "Japan", "Jordan",
+                "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan",
+                "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
+                "Madagascar", "Malawi", "Malaysia", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
+                "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway",
+                "Oman",
+                "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+                "Qatar",
+                "Romania", "Russia", "Rwanda",
+                "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+                "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
+                "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan",
+                "Vanuatu", "Vatican City", "Venezuela", "Vietnam",
+                "Yemen",
+                "Zambia", "Zimbabwe"
+            ];
+
+            const wrapper = document.getElementById('countrySelect');
+            const trigger = wrapper.querySelector('.custom-select-trigger');
+            const optionsContainer = wrapper.querySelector('.options-list');
+            const searchInput = wrapper.querySelector('.search-box input');
+            const hiddenInput = wrapper.querySelector('input[type="hidden"]');
+
+            function populateOptions(filter = '') {
+                optionsContainer.innerHTML = '';
+                const filtered = countries.filter(c => c.toLowerCase().includes(filter.toLowerCase()));
+                
+                filtered.forEach(country => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.innerHTML = `${country} <span class="press-hint">Press to select</span>`;
+                    div.addEventListener('click', () => {
+                        trigger.textContent = country;
+                        hiddenInput.value = country;
+                        wrapper.classList.remove('open');
+                        
+                        // Reset search and scroll for next opening
+                        searchInput.value = '';
+                        populateOptions();
+                        optionsContainer.scrollTop = 0;
+                    });
+                    optionsContainer.appendChild(div);
+                });
+            }
+
+            trigger.addEventListener('click', () => {
+                wrapper.classList.toggle('open');
+                if (wrapper.classList.contains('open')) {
+                    searchInput.focus();
+                }
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                populateOptions(e.target.value);
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!wrapper.contains(e.target)) {
+                    wrapper.classList.remove('open');
+                }
+            });
+
+            populateOptions();
+        });
+    </script>
+</body>
+
+</html>
