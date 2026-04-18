@@ -15,12 +15,13 @@
         rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
     
     <style>
         .tours-hero {
-            height: 40vh;
-            min-height: 300px;
-            background-image: url('./src/assets/images/hero2.png');
+            height: 60vh;
+            min-height: 400px;
+            background-image: url('./src/assets/images/tourshero.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -29,12 +30,13 @@
             position: relative;
             color: white;
             text-align: center;
+            margin-top: 0;
         }
         .tours-hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: linear-gradient(rgba(11, 43, 71, 0.3), rgba(7, 25, 42, 0.7));
         }
         .tours-hero-content {
             position: relative;
@@ -43,9 +45,23 @@
         .tours-hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .tours-hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto;
         }
         .tours-section {
             padding: 5rem 0;
+            background: var(--color-bg-light);
+        }
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
     </style>
 </head>
@@ -58,7 +74,7 @@
             <div class="logo">
                 <a href="/index.html">
                     <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
-                        style="height: 90px; width: auto;">
+                        style="height: 60px; width: auto;">
                 </a>
             </div>
             <div class="nav-links">
@@ -105,62 +121,751 @@
     <section class="tours-section">
         <div class="container reveal">
             <div class="tour-grid">
-                <!-- Tour 1: 6 Days -->
+                
+                <!-- 1. 3 Days Classic & Cultural -->
                 <div class="tour-card">
                     <div class="tour-img-wrapper">
-                        <img src="./src/assets/images/6days_package.png" alt="6 Day Classic & Cultural Tour">
-                        <div class="tour-duration">6 Days</div>
+                        <img src="./src/assets/images/3days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 3 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 03 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Kandy, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 4 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/4days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 4 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 04 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Colombo, Kandy, Peradeniya, Bentota.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 5 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/5days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 5 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 05 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Dambulla, Sigiriya, Kandy, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 6 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/6days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 6 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="tour-info">
                         <h3>Classic & Cultural Tour | 06 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
                         <p>Negambo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Mirissa</p>
                         <div class="tour-footer">
                             <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
                         </div>
                     </div>
                 </div>
-                <!-- Tour 2: 17 Days -->
+
+                <!-- 5. 7 Days Classic & Cultural -->
                 <div class="tour-card">
                     <div class="tour-img-wrapper">
-                        <img src="./src/assets/images/17days_package.png" alt="17 Day Classic & Cultural Tour">
-                        <div class="tour-duration">17 Days</div>
+                        <img src="./src/assets/images/7days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 7 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="tour-info">
-                        <h3>Classic & Cultural Tour | 17 Days</h3>
-                        <p>Negambo, Anuradhapura, Trincomalee, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo</p>
+                        <h3>Classic & Cultural Tour | 07 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negambo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Mirissa</p>
                         <div class="tour-footer">
                             <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
                         </div>
                     </div>
                 </div>
-                <!-- Tour 3: 3 Days -->
+
+                <!-- 6. 8 Days Classic & Cultural -->
                 <div class="tour-card">
                     <div class="tour-img-wrapper">
-                        <img src="./src/assets/images/3days_package.png" alt="3 Day Classic & Cultural Tour">
-                        <div class="tour-duration">3 Days</div>
+                        <img src="./src/assets/images/8days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 8 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="tour-info">
-                        <h3>Classic & Cultural Tour | 03 Days</h3>
-                        <p>Kandy, Bentota, Colombo</p>
+                        <h3>Classic & Cultural Tour | 08 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Dambulla, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
                         <div class="tour-footer">
                             <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
                         </div>
                     </div>
                 </div>
-                <!-- Tour 4: 13 Days -->
+
+                <!-- 7. 9 Days Classic & Cultural -->
                 <div class="tour-card">
                     <div class="tour-img-wrapper">
-                        <img src="./src/assets/images/13days_package.png" alt="13 Day Classic & Cultural Tour">
-                        <div class="tour-duration">13 Days</div>
+                        <img src="./src/assets/images/9days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 9 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 09 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Galle, Colombo</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. 10 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/10days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 10 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 10 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Bentota, Colombo</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. 11 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/11days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 11 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 11 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. 12 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/12days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 12 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 12 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. 13 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/13days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 13 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="tour-info">
                         <h3>Classic & Cultural Tour | 13 Days</h3>
-                        <p>Negambo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
                         <div class="tour-footer">
                             <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- 12. 14 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/14days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 14 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Dambulla, Kandy, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. 15 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/15days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 15 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 15 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. 16 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/16days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 16 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 16 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. 17 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/17days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 17 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 17 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. 18 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/18days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 18 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 18 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Jaffna, Trincomalee, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17. 20 Days Classic & Cultural -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/20days_package.png" alt="Classic & Cultural Tour">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 20 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 20 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Trincomalee, Pasikudha, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18. 7 Days Romantic Escape -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/7days_package.png" alt="Romantic Escape">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 7 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Romantic Escape to Sri Lanka | 07 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Kandy, Nuwara Eliya, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 19. 14 Days Romantic Escape -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/14days_package.png" alt="Romantic Escape">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Romantic Escape to Sri Lanka | 14 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Bentota, Kandy, Dambulla, Pasikudha, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20. 12 Days Romantic Escape -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/12days_package.png" alt="Romantic Escape">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 12 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Romantic Escape to Sri Lanka | 12 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negambo, Dambulla, Kandy, Nuwara Eliya, Ella, Mirissa, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 21. 7 Days Leisure & Family -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/7days_package.png" alt="Leisure & Family Holiday">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 7 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Leisure & Family Holiday | 7 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Kandy, Nuwara Eliya, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 22. 10 Days Leisure & Family -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/10days_package.png" alt="Leisure & Family Holiday">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 10 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Leisure & Family Holiday | 10 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Kandy, Nuwaraeliya, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 23. 12 Days Leisure & Family -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/12days_package.png" alt="Leisure & Family Holiday">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 12 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Leisure & Family Holiday | 12 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Kandy, Nuwaraeliya, Yala, Mirissa, Bentota, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24. 14 Days Leisure & Family -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/14days_package.png" alt="Leisure & Family Holiday">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Leisure & Family Holiday | 14 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Bentota, Kandy, Dambulla, Pasikudha, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 25. 8 Days Wildlife and Adventure -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/8days_package.png" alt="Wildlife and Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 8 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Adventure | 08 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Sigiriya, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 26. 9 Days Wildlife and Adventure -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/9days_package.png" alt="Wildlife and Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 9 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Adventure | 09 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 27. 10 Days Wildlife and Sinharaja -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/10days_package.png" alt="Wildlife and Sinharaja Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 10 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Sinharaja Adventure | 10 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Kurunegala, Sigiriya, Kandy, Ella, Yala, Udawalawa, Hikkaduwa.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 28. 12 Days Wildlife and Adventure -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/12days_package.png" alt="Wildlife and Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 12 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Adventure | 12 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Sigiriya, Kandy, Kithulgala, Adam's Peak, Nuwaraeliya, Ella, Yala, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 29. 14 Days Wildlife and Adventure -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/14days_package.png" alt="Wildlife and Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Adventure | 14 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Anuradhapura, Polonnaruwa, Riverston, Kandy, Sigiriya, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30. 16 Days Wildlife and Adventure -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/16days_package.png" alt="Wildlife and Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 16 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Adventure | 16 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Negombo, Anuradhapura, Jaffna, Trincomalee, Polonnaruwa, Dambulla, Kandy, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 31. 14 Days Wildlife and Sinharaja -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/14days_package.png" alt="Wildlife and Sinharaja Adventure">
+                        <div class="tour-duration">
+                            <span><i class="far fa-calendar-alt"></i> 14 Days</span>
+                            <span class="sep"></span>
+                            <div class="amenities">
+                                <i class="fas fa-car"></i>
+                                <i class="fas fa-bed"></i>
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Wildlife and Sinharaja Adventure | 14 Days</h3>
+                        <div class="tour-location">Sri Lanka</div>
+                        <p>Ritigala, Sigiriya, Kandy, Sinharaja, Ella, Mirissa, Galle, Colombo.</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -173,7 +878,7 @@
                     <div class="logo">
                         <a href="/index.html">
                             <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
-                                style="height: 180px; width: auto; margin-bottom: 1rem;">
+                                style="height: 120px; width: auto; margin-bottom: 1rem;">
                         </a>
                     </div>
                     <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful
@@ -217,8 +922,32 @@
         </div>
     </footer>
 
-    <!-- Custom JS (Vite Module) -->
+    <!-- Scripts -->
     <script type="module" src="/src/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenu = document.querySelector('.close-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>

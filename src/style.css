@@ -684,15 +684,37 @@ img {
 .tour-duration {
     position: absolute;
     top: 15px;
-    right: 15px;
-    background: rgba(255,255,255,0.9);
+    left: 15px;
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(5px);
     color: var(--color-primary);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 500;
+    font-size: 0.9rem;
     box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    z-index: 10;
+}
+
+.tour-duration i {
+    color: var(--color-accent);
+}
+
+.tour-duration .sep {
+    width: 1px;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    margin: 0 0.5rem;
+}
+
+.tour-duration .amenities {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #333;
 }
 
 .tour-info {
@@ -719,6 +741,16 @@ img {
 .tour-info h3 {
     font-family: var(--font-body);
     font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.tour-location {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -730,7 +762,7 @@ img {
 
 .tour-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(0,0,0,0.05);
