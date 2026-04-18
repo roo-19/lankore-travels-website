@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic & Cultural Tour 14 Days | Lankore Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+
+    <style>
+        /* Tour Specific Styles */
+        .tour-header {
+            padding: 180px 0 60px;
+            background-color: var(--color-primary);
+            color: var(--color-bg-white);
+            text-align: left;
+        }
+
+        .tour-header h1 {
+            font-size: 3.5rem;
+            color: var(--color-bg-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .tour-header .location {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tour-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .meta-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(200, 169, 126, 0.2);
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .meta-text span {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-text strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .meta-rating {
+            color: var(--color-accent);
+            font-size: 1.1rem;
+        }
+
+        /* Layout */
+        .tour-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 6rem 0;
+            align-items: start;
+        }
+
+        /* Main Content */
+        .tour-section {
+            margin-bottom: 4rem;
+        }
+
+        .tour-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 1rem;
+        }
+
+        .tour-section h3 {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: var(--font-body);
+        }
+
+        /* Accordion */
+        .accordion-item {
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+            border-radius: var(--radius-sm);
+            background: var(--color-bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            overflow: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .accordion-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-bg-light);
+            transition: var(--transition-fast);
+        }
+
+        .accordion-header:hover {
+            background: rgba(200, 169, 126, 0.05);
+        }
+
+        .accordion-header i {
+            color: var(--color-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-item.active .accordion-header {
+            background: rgba(200, 169, 126, 0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: var(--color-bg-white);
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+        }
+
+        .day-overview {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        .day-overview span {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Inclusions */
+        .inclusion-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .inclusion-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .inclusion-list-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .inclusion-list-items li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .inclusion-list-items li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 1.1rem;
+        }
+
+        .inclusion-list-items li i.fa-check {
+            color: #2ECC71;
+        }
+
+        .inclusion-list-items li i.fa-times {
+            color: #E74C3C;
+        }
+
+        /* Info Lists */
+        .info-list {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .info-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 120px;
+            background: var(--color-bg-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .sidebar-title {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-weight: 600;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-main);
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            background: var(--color-bg-light);
+            margin-bottom: 1.5rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: var(--color-bg-white);
+        }
+
+        .btn-submit {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Similar Tours Slider */
+        .similar-tours {
+            padding: 6rem 0;
+            background: var(--color-bg-white);
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .similar-tours h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .similar-tours h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-primary);
+        }
+
+        .slider-wrapper {
+            position: relative;
+            padding: 10px;
+        }
+
+        .tour-slider {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding-bottom: 2rem;
+        }
+
+        .tour-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tour-slider .tour-card {
+            flex: 0 0 calc(33.333% - 1.35rem);
+            scroll-snap-align: start;
+            min-width: 320px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .dot.active {
+            background: var(--color-primary);
+            width: 25px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1100px) {
+            .tour-slider .tour-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tour-slider {
+                gap: 1.5rem;
+            }
+            .tour-slider .tour-card {
+                flex: 0 0 calc(100% - 0rem);
+            }
+            .similar-tours h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 90px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/tours.html" class="active">Tours</a>
+                <a href="/tailor-made.html">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/tailor-made.html">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Tour Text Header (No Image) -->
+    <section class="tour-header">
+        <div class="container">
+            <h1>Classic & Cultural Tour | 14 Days</h1>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Sri Lanka</div>
+
+            <div class="tour-meta-grid">
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="far fa-clock"></i></div>
+                    <div class="meta-text">
+                        <span>Duration</span>
+                        <strong>14 Days</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fas fa-hiking"></i></div>
+                    <div class="meta-text">
+                        <span>Tour Type</span>
+                        <strong>Classic & Cultural</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="far fa-star"></i></div>
+                    <div class="meta-text">
+                        <span>Rating</span>
+                        <div class="meta-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container tour-layout">
+        <!-- Main Content (Left) -->
+        <main class="tour-main">
+            <!-- Overview Section -->
+            <section class="tour-section">
+                <h2>Overview</h2>
+                <h3>Two Weeks of Grand Journey in Sri Lanka</h3>
+                <p>This incredible 14-day Sri Lanka itinerary takes in the very best that the island has to offer. You will enjoy an epic journey from the bustling city of Negombo to the ancient ruins and temples that make up the Cultural Triangle. Travel through the eastern coast of the island and enjoy the calmness of blissful hidden beaches. Enjoy wildlife safari where you could spot sloth bears or leopards and watch hundreds of elephants feeding and bathing in a lake.</p>
+                <p>In addition, visit the mystical Hill Country, full of tea plantations and colonial hill stations. Learn how tea is made and explore gorgeous villages in the mountains.</p>
+                <p>Then, head down south to the coast, take part in whale-watching tours, try your skills at surfing board and eat some of the best seafood on the entire island. Lastly, cap off a wonderful holiday in the UNESCO World Heritage site of Galle Fort, browsing through galleries and handcraft shops, sipping on a chill beer and watching the sunset from the fort ramparts.</p>
+            </section>
+
+            <!-- Itinerary Section -->
+            <section class="tour-section">
+                <h2>Itinerary</h2>
+                <p>We have carefully planned out each day to give you the best possible experience. From exploring historic landmarks to tasting delicious local cuisine, each day is packed with adventure and excitement. Join us as we take you on a journey through some of the most fascinating destinations in the world.</p>
+
+                <div class="accordion">
+                    <!-- Day 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 1 - AIRPORT PICK-UP / NEGOMBO <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Welcome to Sri Lanka, a land like no other, where this nine days tour of discovery will expose you to the country’s rich history and culture, as well as its wildlife, soft adventures, and secluded beaches with stunning golden sand.</p>
+                                <p>You will be met by your tour guide when you arrive at Colombo CMB Airport, and you will then be taken to your accommodation. The first stop will be the seaside town of Negombo, which has long been regarded as Sri Lanka’s most well-preserved beach and is well-known for its cuisine, entertainment, and traditional fishery village. We haven’t scheduled any activities for day one, so you can unwind at Negombo Beach or by the pool of your cozy hotel. You can walk along the beach in the evening while enjoying the beautiful sunsetting and the relaxing atmosphere of Negombo beach.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Arrival to Sri Lanka, Colombo (Katunayaka) International Airport</li>
+                                        <li>Greetings by Lankore Travels representative</li>
+                                        <li>Proceed to Negombo</li>
+                                        <li>Check into Hotel in Negombo</li>
+                                        <li>Walk around the Negombo city</li>
+                                        <li>Relax at the beach and pool of your hotel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 2 - KINGDOM OF ANURADHAPURA / WILPATTU SAFARI <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Anuradhapura, city, north-central Sri Lanka. It is situated along the Aruvi Aru River. The old section of Anuradhapura, now preserved as an archaeological park and designated a UNESCO World Heritage site in 1982, is the best known of Sri Lanka’s ancient ruined cities.</p>
+                                <p>In the immediate vicinity are huge bell-shaped dagobas (Buddhist commemorative shrines, or stupas) built of small sun-dried bricks as well as temples, sculptures, palaces, and ancient drinking-water reservoirs. The city also contains an ancient pipal tree that is believed to have originally been a branch of the Bo tree at Bodh Gaya (Bihar, India), under which Gautama Buddha attained Enlightenment.</p>
+                                <p>Wilpttu National park is among the oldest and most important protected areas in Sri Lanka. It also contains a number of important cultural sites. The sanctuary lies inland from the coast and is entirely within Northern Province.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>After breakfast proceed towards Anuradhapura</li>
+                                        <li>Visit Sri Maha Bodhi and Ruwanwali seya</li>
+                                        <li>A tour around the ancient Anuradhapura city</li>
+                                        <li>Evening join with the Wilpattu National Park safari</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 & 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 3 & 4 - TRINCOMALEE / EASTERN COAST <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Day 3:</strong> After breakfast, you’ll travel towards the eastern coast of Sri Lanka and you will visit the city of Trincomalee. It is an amazing multicultural town with lovely places such as Nilaveli Beach, Pigeon Island and Koneswaram Kovil. With its white sands and gentle waves, Trincomalee beach is the ultimate getaway for those who desire a relaxing vacation in Sri Lanka.</p>
+                                <p><strong>Day 4:</strong> In the morning, hit back to the beautiful golden sandy beach and jump into a boat for an amazing ride on the sea to explore Pigeon Island. The island possesses a 200m long and 100m wide coral reef with over 100 species of exquisite corals making it an unmatched live coral reef, unlike any other in Sri Lanka.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Koneshwaram Kovil</li>
+                                        <li>Fort Frederick</li>
+                                        <li>Pigeon Island boat ride Snorkeling</li>
+                                        <li>Relax in beach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 5 - POLONNARUWA ANCIENT CITY/ JEEP SAFARI <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After breakfast, you will proceed to Polonnaruwa ancient city (UNESCO WORLD HERITAGE SITE). Sri Lanka has a rich heritage and Polonnaruwa is one of the greatest and oldest civilizations in the world. It was the second capital, ruled by 56 kings for over 8000 years.</p>
+                                <p>Afternoon, you will be heading to Minneriya/Kaudulla National Park for an afternoon 4×4 jeep safari, since it is the best time to spot wild elephants in their natural habitat. Spreading over 8800 hectares, this park is mainly a sanctuary for elephants.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Minneriya Wildlife safari</li>
+                                        <li>Ayurvedic herbal treatment can be arranged</li>
+                                        <li>Bicycle tour around the ancient city – Included</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 6 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 6 - SIGIRIYA ROCK FORTRESS / VILLAGE TOUR <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After breakfast, you will take a wonderful journey across the stunning Sri Lankan countryside towards Dambulla city. Visit Sigiriya Lion Rock Fortress (UNESCO WORLD HERITAGE SITE). Sigiriya refuses to reveal its secrets easily; in fact, you have to climb a series of vertiginous staircases to reach the top.</p>
+                                <p>Thereafter, you will enjoy a wonderful cultural village tour while exploring the beautiful countryside. It will start with a Bullock Cart ride, one of the most ancient and prime transportation systems in Sri Lanka. While on the tour you will have a canoeing boat ride across the lake and a TukTuk drive before reaching the farmer’s house.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Sigiriya Ancient Rock Fortress visit</li>
+                                        <li>Catamaran boat ride – Included in the package</li>
+                                        <li>Cultural Village Tour – Included in the package</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 7 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 7 - CAVE TEMPLE / KANDY CITY TOUR <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Early in the morning, climb Pidurangala rock to capture the morning sunrise. Afterwards, enjoy breakfast at the hotel and set off to Kandy. En route, visit the Golden Buddha Statue, the Royal Cave Temple (UNESCO WORLD HERITAGE SITE), and Matale Spice Garden.</p>
+                                <p>Then, proceed towards Kandy city, the capital of the last Sinhalese kingdom. Kandy is famous for its sacred Buddhist sites, including the Temple of the Tooth Relic (UNESCO WORLD HERITAGE SITE). Thereafter, you’ll enjoy a walk around Kandy’s busy city centre and engage with a cultural dance show.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Pidurangala rock hike</li>
+                                        <li>Dambulla cave temple visit</li>
+                                        <li>Temple of Tooth Relic visit</li>
+                                        <li>Hot-air balloon tour can be arranged</li>
+                                        <li>Kandy city tour (local markets/view point)</li>
+                                        <li>Spice garden visit – Included in the package</li>
+                                        <li>Traditional dance show – Included in the package</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 8 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 8 - HILL COUNTRY TEA PLANTATION / WATERFALLS <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After breakfast, you will visit Tiesh gem museum. Next, you will visit the Peradeniya Royal Garden, which is known as one of the best botanical gardens in Asia.</p>
+                                <p>Thereafter, you’ll enjoy a wonderful journey through the lush green tea plantations and waterfalls towards Sri Lanka’s tea region of Nuwara Eliya. It is often referred to as “Little England”. While driving through the cold mist hills, stop at a tea plantation and step into a tea factory to observe the rich tradition of processing Ceylon Tea.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Gem Museum</li>
+                                        <li>Peradeniya Royal Botanical Garden</li>
+                                        <li>Tea factory visit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 9 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 9 - SPECTACULAR TRAIN JOURNEY <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>In the morning, you will enjoy a spectacular train journey from Nanu-oya station to Ella village. It is known as one of the most picturesque hill country train journeys in the world.</p>
+                                <p>Ella is everyone’s favorite hill country village due to the fact that it’s a wonderful nature-friendly location. The Nine Arch Bridge, a major tourist attraction in Ella, is a massive bridge built entirely of solid rocks, bricks and cement. Ella is a stunning location that anyone who is visiting Sri Lanka should not miss out.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Mini Adam’s Peak trekking</li>
+                                        <li>Ella Village walk (Nine Arch bridge)</li>
+                                        <li>Spectacular train journey – Included in the package</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 10 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 10 - LEOPARDS TRAILS SAFARI AT YALA NATIONAL PARK <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After breakfast, depart from Ella towards Yala National Park. En-route, you will visit Ravana waterfall, one of the most popular sightseeing attractions in Ella.</p>
+                                <p>Later on, visit Yala National Park, the largest and most stunning national park in Sri Lanka. Encompassing a range of diverse ecosystems, the park has an impressive variety of wildlife, including sloth bears, leopards and lots of colorful birds. Enjoy a 4×4 jeep ride searching for wildlife under the evening sunset.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Rawana Waterfall</li>
+                                        <li>Wildlife safari at Yala National Park</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 11 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 11 - LEISURE DAY ON THE BEACH <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After a fantastic journey through the coconut palms, mountains and waterfalls, you have finally arrived at the world-famous beachside of Sri Lanka. Mirissa/Dickwella is a delightful sandy beach characterized by white sands and coconut palms.</p>
+                                <p>Upon arrival at your hotel, you may grab a towel to relax on the beach while enjoying a cocktail or a chill beer under the shade of a palm tree. Optional activities include Jet Ski, Banana & Tube Boating, Diving, Snorkeling, and Surfing.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Hummanaya Blowhole visit</li>
+                                        <li>Leisure & relax in the beach</li>
+                                        <li>Water sports can be arranged</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 12 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 12 - WHALE WATCHING / LEISURE DAY <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Early in the morning, hit back to the beautiful golden sandy beach and jump into a boat for an amazing ride on the sea to capture the blue whales and dolphins. Mirissa is one of the best places in the world to spot the biggest creature on the planet.</p>
+                                <p>With a free afternoon, you may enjoy walking around the fisherman’s village or sunbathing on the beach. Evening, you’ll definitely enjoy the stunning scenery of sunset and pleasant seaside atmosphere.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Early morning enjoy the Whale Watching Boat Ride (Seasonal Activity)</li>
+                                        <li>Leisure & relax in the beach</li>
+                                        <li>Water activities can be arranged</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 13 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 13 - GALLE FORT / TURTLE HATCHERY <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>Early in the morning, your tour guide will drive you to Galle, a city well-known for its Fort, along the southwest coast. It is the point where classical British and Dutch architecture interacts with a tropical environment.</p>
+                                <p>You’ll spend the afternoon at a turtle hatchery center where young turtles are trained to swim for the first time and injured adults are rehabilitated and released back into the wild.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>After breakfast proceed toward Galle</li>
+                                        <li>En route to Galle, Capture the Stilt fishermen</li>
+                                        <li>Visit a World-famous Galle Fort & nearby popular places</li>
+                                        <li>Visit a Turtle Hatchery Center</li>
+                                        <li>Evening, enjoy a Boat Ride in Madu River & Fish Foot therapy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 14 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            DAY 14 - COLOMBO CITY TOUR / AIRPORT OR HOTEL DROP-OFF <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p>After breakfast, you have the opportunity to take an optional city walk with your tour guide to visit the most highlighted places in the city and also do some last-minute shopping as well.</p>
+                                <p>Perhaps, you may intend to pop into a famous and internationally renowned restaurant in Colombo to end your trip over an unforgettable meal. Thereafter, proceed to the airport in time for the return flight.</p>
+                                <div class="day-overview">
+                                    <strong>ACTIVITIES:</strong>
+                                    <ul class="info-list" style="margin-top: 10px;">
+                                        <li>Colombo city and shopping tour</li>
+                                        <li>Colombo highlights: Galle Face Green, Gangarama Independent Square, etc…</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Included / Excluded Section -->
+            <section class="tour-section">
+                <h2>Included / Excluded</h2>
+                <div class="inclusion-list">
+                    <div class="inclusion-column">
+                        <h4>Included</h4>
+                        <ul class="inclusion-list-items">
+                            <li><i class="fas fa-check"></i> Airport pick-up and drop-off</li>
+                            <li><i class="fas fa-check"></i> Assistance at the airport</li>
+                            <li><i class="fas fa-check"></i> Professional Chauffeur Guide for the entire journey</li>
+                            <li><i class="fas fa-check"></i> Fully Air-Conditioned Private modern vehicle</li>
+                            <li><i class="fas fa-check"></i> Fuel & local insurance for the vehicle</li>
+                            <li><i class="fas fa-check"></i> Government taxes & no hidden charges</li>
+                            <li><i class="fas fa-check"></i> 24 hours emergency contact</li>
+                        </ul>
+                    </div>
+                    <div class="inclusion-column">
+                        <h4>Excluded</h4>
+                        <ul class="inclusion-list-items">
+                            <li><i class="fas fa-times"></i> Entrance / Excursions fees not stated as included</li>
+                            <li><i class="fas fa-times"></i> Meals not stated in the itinerary</li>
+                            <li><i class="fas fa-times"></i> Air fare and travel insurance (on request)</li>
+                            <li><i class="fas fa-times"></i> Any personal expenses</li>
+                            <li><i class="fas fa-times"></i> Late check-out & early check-in charges</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Useful Information Section -->
+            <section class="tour-section">
+                <h2>Useful Information</h2>
+                
+                <h3>Key Notes</h3>
+                <ul class="info-list">
+                    <li><strong>Guide:</strong> A Friendly and professional tour leader tasked with ensuring the smooth operations of the tour, as well as providing practical support to passengers throughout the entire trip.</li>
+                    <li><strong>Transport:</strong> Private transportation in an fully air-conditioned modern vehicle.</li>
+                    <li><strong>Flight:</strong> International flights are excluded. You can organize your flights separately. We’ll arrange free airport pick-up and drop-off.</li>
+                </ul>
+
+                <h3>Important Notes</h3>
+                <ul class="info-list">
+                    <li>Most entrance and activity fees are paid in local currency. We suggest you keep some Sri Lankan rupees.</li>
+                    <li>Religious places have a strict protocol when it comes to clothes and people should cover themselves up.</li>
+                    <li>Sun protection, mosquito repellent, sunglasses and a hat can be very useful during your tour.</li>
+                    <li>The official check-in time at all hotels will be at 02:00 pm. The official check-out time is at 11:00 am.</li>
+                </ul>
+
+                <h3>Climate And Average Temperatures</h3>
+                <p>Sri Lanka is a year-around holiday destination with two monsoon seasons. The temperature is constantly around 27°C on the coast, while on the hill side it always stays below 20°C.</p>
+
+                <h3>Terms And Conditions</h3>
+                <ul class="info-list">
+                    <li>Local conditions prevalent at the time of travel may result in modifications to tour contents without prior notice.</li>
+                    <li>Children must be accompanied by a responsible adult 18 years old or over to travel. No unaccompanied minors allowed.</li>
+                    <li>No refund for unused services.</li>
+                </ul>
+                
+                <h3>Optional Extras</h3>
+                <ul class="info-list">
+                    <li>The tour can be customized (Itinerary/Days/Meals)</li>
+                    <li>Ayurvedic Treatments</li>
+                    <li>B’Day/Anniversary-celebrations arrangements</li>
+                    <li>Shopping Tours</li>
+                </ul>
+            </section>
+        </main>
+        
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Inquire About This Tour</h3>
+
+            <form action="#">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile number *</label>
+                    <input type="text" placeholder="e.g. +94 123456789 (WhatsApp / WeChat)" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Country</label>
+                    <select>
+                        <option value="">Select Country</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="AU">Australia</option>
+                        <option value="CA">Canada</option>
+                        <option value="EU">Europe</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Estimated arrival date *</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Number of travellers *</label>
+                    <input type="number" placeholder="Eg: 2" required min="1">
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
+            </form>
+        </aside>
+    </div>
+
+    <!-- View Other Tours Slider -->
+    <section class="similar-tours">
+        <div class="container">
+            <h2>View Other</h2>
+            <h3>Tours</h3>
+            
+            <div class="slider-wrapper">
+                <div class="tour-slider" id="tourSlider">
+                    <!-- Tour 1 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/3days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 3 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 03 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Kandy, Bentota, Colombo.</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 2 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/6days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 6 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 06 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negambo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Mirissa</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrapper">
+                            <img src="./src/assets/images/13days_package.png" alt="Classic & Cultural Tour">
+                            <div class="tour-duration">
+                                <span><i class="far fa-calendar-alt"></i> 13 Days</span>
+                                <span class="sep"></span>
+                                <div class="amenities">
+                                    <i class="fas fa-car"></i>
+                                    <i class="fas fa-bed"></i>
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Classic & Cultural Tour | 13 Days</h3>
+                            <div class="tour-location">Sri Lanka</div>
+                            <p>Negambo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
+                            <div class="tour-footer">
+                                <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/src/assets/images/logo1.png" alt="Lankore Travels Logo" style="height: 180px; width: auto; margin-bottom: 1rem;">
+                        </a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful island of Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/94711444631"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/tours.html">Our Tours</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Transports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="/index.html#blog">Travel Blog</a></li>
+                        <li><a href="/tailor-made.html">Custom Itineraries</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Accordion functionality for itinerary
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                
+                header.addEventListener('click', () => {
+                    // Close other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    const content = item.querySelector('.accordion-content');
+                    
+                    if (item.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+
+            // Open first day by default
+            if(accordionItems.length > 0) {
+                accordionItems[0].classList.add('active');
+                const firstContent = accordionItems[0].querySelector('.accordion-content');
+                firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+            }
+
+            // Slider Logic
+            const slider = document.getElementById('tourSlider');
+            const dots = document.querySelectorAll('.dot');
+            
+            if(slider && dots.length > 0) {
+                slider.addEventListener('scroll', () => {
+                    const scrollPercent = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
+                    const activeIndex = Math.round(scrollPercent * (dots.length - 1));
+                    
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === activeIndex);
+                    });
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        const scrollTo = (slider.scrollWidth - slider.clientWidth) * (index / (dots.length - 1));
+                        slider.scrollTo({
+                            left: scrollTo,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
