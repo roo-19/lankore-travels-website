@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Tours | Lankore Travels</title>
+    <meta name="description"
+        content="Explore our curated Sri Lanka tour packages. From classic cultural journeys to wildlife adventures.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .tours-hero {
+            height: 40vh;
+            min-height: 300px;
+            background-image: url('./src/assets/images/hero2.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        .tours-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .tours-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .tours-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .tours-section {
+            padding: 5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                        style="height: 90px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#destinations">Destinations</a>
+                <a href="/tours.html" class="active">Tours</a>
+                <a href="/tailor-made.html">Tailor Made Tours</a>
+                <a href="/transports.html">Transports</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/contact-us.html" class="btn btn-primary btn-nav">Book Tour</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <div class="mobile-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#destinations">Destinations</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/tailor-made.html">Tailor Made Tours</a>
+            <a href="/transports.html">Transports</a>
+            <a href="/about-us.html">About Us</a>
+            <a href="/contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="tours-hero">
+        <div class="tours-hero-content container reveal">
+            <h1>Our Tour Packages</h1>
+            <p>Carefully curated journeys to show you the best of Sri Lanka</p>
+        </div>
+    </header>
+
+    <!-- Tours Grid -->
+    <section class="tours-section">
+        <div class="container reveal">
+            <div class="tour-grid">
+                <!-- Tour 1: 6 Days -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/6days_package.png" alt="6 Day Classic & Cultural Tour">
+                        <div class="tour-duration">6 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 06 Days</h3>
+                        <p>Negambo, Sigiriya, Kandy, Nuwara Eliya, Ella, Yala, Mirissa</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 2: 17 Days -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/17days_package.png" alt="17 Day Classic & Cultural Tour">
+                        <div class="tour-duration">17 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 17 Days</h3>
+                        <p>Negambo, Anuradhapura, Trincomalee, Polonnaruwa, Dambulla, Kandy, Kithulgala, Nuwara Eliya, Ella, Yala, Mirissa, Galle, Colombo</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 3: 3 Days -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/3days_package.png" alt="3 Day Classic & Cultural Tour">
+                        <div class="tour-duration">3 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 03 Days</h3>
+                        <p>Kandy, Bentota, Colombo</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 4: 13 Days -->
+                <div class="tour-card">
+                    <div class="tour-img-wrapper">
+                        <img src="./src/assets/images/13days_package.png" alt="13 Day Classic & Cultural Tour">
+                        <div class="tour-duration">13 Days</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Classic & Cultural Tour | 13 Days</h3>
+                        <p>Negambo, Sigiriya, Polonnaruwa, Kandy, Nuwaraeliya, Ella, Yala, Galle, Colombo</p>
+                        <div class="tour-footer">
+                            <a href="/contact-us.html" class="btn btn-primary btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="./src/assets/images/logo1.png" alt="Lankore Travels Logo"
+                                style="height: 180px; width: auto; margin-bottom: 1rem;">
+                        </a>
+                    </div>
+                    <p>Curating exceptional, luxury travel experiences and tailor-made journeys across the beautiful
+                        island of Sri Lanka.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/tours.html">Our Tours</a></li>
+                        <li><a href="/index.html#destinations">Destinations</a></li>
+                        <li><a href="/transports.html">Vehicle Fleet</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="/tailor-made.html">Custom Itineraries</a></li>
+                        <li><a href="#">Travel Requirements</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact-us.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lankoretravels.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lankore Travels. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS (Vite Module) -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
